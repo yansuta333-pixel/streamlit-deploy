@@ -15,15 +15,13 @@ pref_names = list(pop.index)
 years = list(pop.columns)
 
 
-POPULATION = 'https://www.e-stat.go.jp/stat-search/files?-toukei=00200524&tstat=000000090001&tclass1=000000090004&tclass2=000001051180'
+POPULATION = 'https://www.e-stat.go.jp/stat-search/files?toukei=00200524&tstat=000000090001&tclass1=000000090004&tclass2=000001051180'
 GEOLOCATIONS = 'https://gist.github.com/ctsaran/42728dad3c7d8bd91f1d'
 
 cols3 = st.columns(3)
 cols3[0].markdown('**推計人口 (2000~2015年)**')
-cols3[1].link_button(':material/link:人口データ',POPULATION,
-            help=f'総務省: {POPULATION}')
-cols3[2].link_button('material/link:緯度経度データ',GEOLOCATIONS,
-            help=f'Gist: {GEOLOCATIONS}')
+cols3[1].link_button(':material/link:人口データ',POPULATION,help=f'総務省: {POPULATION}')
+cols3[2].link_button('material/link:緯度経度データ',GEOLOCATIONS,help=f'Gist: {GEOLOCATIONS}')
 
 
 table,graph,geolocation = st.tabs(['表','グラフ','地図'])
